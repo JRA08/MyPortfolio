@@ -1,0 +1,525 @@
+html,body {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   transition: 0.5s;
+}
+
+* {
+margin: 5;
+padding: 5;
+font-family: sans-serif;
+box-sizing: border-box;
+  }
+ 
+body {  
+background: #0d0d0d;
+color: #fff;
+}
+
+.myPic{
+border-radius: 120px;
+padding: 3px;
+width: 430px;
+height: 610px;
+border: 1px solid black;
+background-color: rgb(250, 250, 250);
+margin-top: -28%;
+position: relative;
+right: -70px;
+transition: background 0.5s, transform 0.5s;
+ }
+
+ .myPic:hover{
+   transform: translateY(-10px);
+ }
+#About.container{ 
+padding: 10px 10%;
+
+ }
+
+nav {
+display: flex;
+align-items: center;
+justify-content: end;
+flex-wrap: wrap;
+
+}
+
+nav ul li {
+display: inline-block;
+list-style: none; 
+margin: 20px 50px;
+position: relative;
+right: 20px;
+
+}
+
+nav ul li a {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font: 25px;
+   position: relative;
+   font-size: 21px;
+   font-weight: 450;
+}
+
+nav ul li a::after {
+   content: '';
+   width: 0%;
+   height: 3px;
+   background: #00baf3;
+   position: absolute;
+   left: 0;
+   bottom: -6px;
+   transition: 0.7s ;
+}
+nav ul li a:hover::after{
+   width: 100%;
+}
+ 
+a:hover{
+ color:aqua;   
+ font-size: 15px;
+}
+
+.header-text{
+   margin-top: 10%;
+   font-size: 35px;
+   position: relative;
+   right: -650px;
+   animation: 1.5s fadeInUp;
+}
+.header-text h1{
+   margin-top: 0%;  
+}
+
+.header-text h1 span{
+   color: #30ecdd;
+}
+
+.header-text h1 span.tite{
+   color: #ff2fa1;
+}
+
+.header-text p {
+   color: #5becff;
+}
+.header-text p span{
+   color: #f74187;
+}
+
+/*---------aBOUT--------*/
+#About{
+   position: relative;
+   padding: 240px 0;
+   color: #ffffff;
+}
+
+.subtitle{
+   text-align: center;
+   font-size: 55px;
+   font-weight: 600px;
+   align-items: center;
+}
+.aboutCol p{
+ margin: 5rem;
+ text-align: justify;
+ font-size: 22px;
+ font-style: normal;
+ border-radius: 20px;
+ background: #2929298a;
+ display: block;
+ padding: 32px;
+ transition: background 0.5s, transform 0.5s;
+}
+
+.aboutCol p:hover{
+    transform: translateY(-15px);
+    background:#4444448a;
+}
+
+.aboutCol p span{
+      color:#ff0080;
+      font-size: 23px;
+}
+
+.tabTitles{
+   display: flex;
+   margin: 20px 0 40px;
+}
+.tab-links{
+   margin-right: 100px;
+   font-size: 22px;
+   font-weight: 500;
+   cursor: pointer;
+   position: relative;
+   right: -490px;
+}
+
+.tab-links::after{
+   content: '';
+   width: 0%;
+   height: 3px;
+   background: #00baf3;
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   transition: 0.4s ;
+}
+ .tab-links.active-links::after{
+    width: 100%;
+ }
+.tabContents ul li{
+   list-style: none;
+   margin: 10px;
+   font-size: 22px;
+}
+
+.tabContents ul li span{
+   color: #5becff;
+   font-size: 22px;
+}
+
+.tabContents{
+   animation: 1.5s fadeInUp; 
+   display: none; 
+   
+}
+
+@keyframes fadeInUp {
+   0% {
+     transform: translateY(100%);
+     opacity: 0;
+   }
+   100% {
+     transform: translateY(0%);
+     opacity: 1;
+   }
+ }
+
+.tabContents.activeTab{
+   display: block;
+   
+}
+
+.tab-links.active-links::selection{
+   color: #f74187   
+}
+
+.tabContents#Experience{
+   text-align: center;
+}
+
+.tabContents#Education{
+   text-align: right;
+   margin-right: 5%;
+}
+
+/*---------Services-----------------*/
+#Services{
+   padding: 35px 0;
+}
+.servicesList{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   grid-gap: 40px;
+   margin-top: 50px;
+   margin: 8rem;
+
+}
+.servicesList div{
+     border-radius: 20px;
+     background: #292929;
+     padding: 40px;
+     font-size: 20px;
+     font-weight: 150;
+     border-right: 10px;
+     transition: background 0.5s, transform 0.5s;
+}
+
+.servicesList div i{
+   font-size: 39px;
+   margin-right: 10px;
+   position: relative;
+}
+
+.servicesList div a{
+   text-decoration:underline;
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+   display: inline-block;
+
+}
+
+.servicesList div p{
+   font-size: 15px;
+   font-weight: 85px;
+}
+
+.servicesList div h2{
+   font-size: 33px;
+   font-weight: 850;
+   margin-bottom: 15px;
+   color: #f74187;
+}
+
+.servicesList div:hover{
+   background: #00baf3;
+   transform: translateY(-10px);
+}
+
+/*--------Portfolio--------------*/
+#Portfolio{
+   padding: 50px;
+}
+
+.workList{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   grid-gap: 100px;
+   margin-top: 50px;
+   
+}
+.MariaMakiling{
+   border-radius: 20px;
+   border: solid;
+   width: 600px;
+   height: 400px;
+   position: relative;
+   left: 100px;
+   transition: transform 0.5s;
+   }
+
+
+.WandererMatsu{
+   border-radius: 20px;
+   border: solid;
+   height: 400px;
+   width: 600px;
+   margin-bottom: 400px;
+   transition: transform 0.5s;
+   
+}
+
+.abnoy{
+   color: #0bc6ff;
+   text-align: center;
+   font-size: 24px;
+   font-style: oblique;
+}
+
+.work1 div h3{
+
+   right: -350px;
+   text-align: justify;
+    
+}
+.work1 div p{
+    font-size: 30px;
+   right: -300px;
+   text-align: justify;
+}
+
+.work2 div{
+
+   text-align: center;
+   top: -400px;
+     
+}
+.work1 div a{
+   font-size: 30px;
+   color: #d83990;
+
+   }
+   
+.work2 div a{
+font-size: 30px;
+color: #d83990;
+}
+
+.work1 div{
+   width: 0;
+   height: 0;
+   background: linear-gradient(rgba(0,0,0,0.6), #51d6ff);
+   border-radius: 20px;
+   position: relative;
+   left: 100px;
+   bottom: 0;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 0 0px;
+   text-align: center;
+   top: -400px;
+   transition: height 0.5s;
+}
+
+.work2 div{
+   width: 0;
+   height: 0;
+   background: linear-gradient(rgba(0,0,0,0.6), #00baf3);
+   border-radius: 20px;
+   position: relative;
+   left: 0;
+   bottom: 0;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 0 0px;
+   text-align: center;
+   top: -800px;
+   transition: height 0.5s;
+   margin-bottom: -350px;
+}
+
+.workList :hover img{
+   transform: scale(1.1);
+}
+
+.workList :hover .layer{
+   height: 400px;
+   width: 600px;
+   
+}
+
+#Portfolio .layer h3{
+   font-size: 30px;
+}
+#Portfolio .layer p{
+   font-size: 20px;
+}
+
+#Contact{
+   padding: 90px;
+}
+.Btn{
+   display: block;
+   margin: 50px auto;
+   width: fit-content;
+   border: 1px solid #00a2ff;
+   padding: 14px 50px;
+   border-radius: 6px;
+   text-decoration: none;
+   color: #ffffff;
+   transition: 0.5s;
+   position: relative;
+}
+
+.Btn:hover{
+   background:#30ecdc80;
+}
+
+.contactLeft{
+   flex-basis: 35%;
+}
+.contactRight{
+   flex-basis: 60%;
+}
+
+.contactLeft p{
+   margin-top: 30px;
+   font-size: 20px;
+   
+}
+
+.contactLeft h1{
+   position: relative;
+   left: -450px;
+   font-size: 70px;
+}
+
+.contactLeft p i{
+   color: #18ffff;
+   margin-right: 10px;
+   font-size: 30px;
+   position: relative;
+
+}
+.contactLeft a{
+   font-size: 25px;
+
+}
+
+.socialIcons{
+margin-top: 20px;
+}
+
+.socialIcons a{
+   text-decoration: none;
+   font-size: 30px;
+   margin-right: 15px;
+   color: #eeeeee;
+   display: inline-block;
+   transition: transform 0.3s;
+}
+.socialIcons a:hover{
+   color:#f74187;
+   transform: translateY(-8px);
+}
+
+.Btn.Btn2{
+   display: inline-block;
+   color: #00a2ff;
+
+}
+.contactRight .Btn.Btn2{
+   background-color: rgba(40, 255, 255, 0.603);
+   color: #ffffff;
+   position: relative;
+   left: 770px;
+   top: -450px;
+   font-size: 20px;
+}
+.contactRight .Btn.Btn2:hover{
+   background:#0059ff;
+   transition: 0.5s;
+   cursor: pointer;
+   transform: scale(1.1);
+
+
+}
+.contactRight{
+   width: 100%;
+}
+ form input, form textarea{
+   width: 60%;
+   border: 0;
+   outline: none;
+   background: #4e4b4b;
+   padding: 20px;
+   margin: 15px 490px;
+   color: #ffffff;
+   font-size: 18px;
+   border-radius: 6px; 
+   position: relative;
+   top: -400px ;        
+ }
+
+ .Copyright{
+   text-align: center;
+   padding: -1px 0px;
+   font-weight: 600;
+   margin-top: 100px;
+   bottom: -100px;
+   position: relative;
+   top: 10px;
+ }
+
+ #msg{
+      color: rgb(97, 255, 97);
+      margin-top: 10px;
+      display: block;
+      position: relative;
+      text-align: center;
+      top: -500px;
+      font-size: 20px;
+      font-weight: 700;
+ }
